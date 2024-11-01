@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+
+<DialogPane prefHeight="279.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PeriodDialogController">
+   <content>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="labelDay" text="Day">
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelPeriod" text="Period" />
+         </children>
+      </HBox>
+   </content>
+</DialogPane>

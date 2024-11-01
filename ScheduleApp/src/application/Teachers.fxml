@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TeachersController">
+   <center>
+      <TableView prefHeight="860.0" prefWidth="685.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="83.0" text="Grade" />
+          <TableColumn prefWidth="292.0" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="203.0" text="Blessings" />
+            <TableColumn prefWidth="191.0" text="Tallies" />
+            <TableColumn prefWidth="246.0" text="Give Blessing" />
+            <TableColumn minWidth="0.0" prefWidth="194.0" text="Give Tally" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <AnchorPane prefHeight="71.0" prefWidth="1210.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="34.0" layoutY="27.0" text="Grade" />
+            <Button fx:id="btnLogout" layoutX="1116.0" layoutY="23.0" mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+            <ComboBox fx:id="comboGrade" layoutX="92.0" layoutY="24.0" onAction="#gradeAction" prefWidth="150.0" promptText="Grade" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

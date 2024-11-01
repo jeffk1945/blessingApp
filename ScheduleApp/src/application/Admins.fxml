@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <Label text="Label" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Label text="Label" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Label text="Label" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="33.0" layoutY="27.0" text="Grade" />
+            <ChoiceBox layoutX="82.0" layoutY="23.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

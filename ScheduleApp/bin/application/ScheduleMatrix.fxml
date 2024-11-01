@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="751.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ScheduleMatrixController">
+   <top>
+      <AnchorPane prefHeight="54.0" prefWidth="1039.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboYear" layoutX="27.0" layoutY="14.0" onAction="#yearAction" prefHeight="26.0" prefWidth="111.0" promptText="Year" />
+            <ComboBox fx:id="comboSemester" layoutX="151.0" layoutY="14.0" onAction="#semesterAction" prefHeight="26.0" prefWidth="121.0" promptText="Semester" />
+            <ComboBox fx:id="comboSchool" layoutX="695.0" layoutY="14.0" onAction="#schoolAction" prefHeight="26.0" prefWidth="117.0" promptText="School" />
+            <ComboBox fx:id="comboCampus" layoutX="437.0" layoutY="14.0" onAction="#campusAction" prefHeight="26.0" prefWidth="116.0" promptText="Campus" />
+            <ComboBox fx:id="comboTeacher" layoutX="852.0" layoutY="14.0" onAction="#teacherAction" prefWidth="150.0" promptText="Teacher" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="697.0" prefWidth="72.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <BorderPane prefHeight="650.0" prefWidth="886.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox prefHeight="622.0" prefWidth="886.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="622.0" prefWidth="135.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" />
+                        <Button fx:id="period1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#period1Action" prefHeight="67.0" prefWidth="69.0" text="Period 1" />
+                        <Button fx:id="period2" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#period2Action" prefHeight="67.0" prefWidth="70.0" text="Period 2" />
+                        <Button fx:id="period3" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#period3Action" prefHeight="67.0" prefWidth="70.0" text="Period 3" />
+                        <Button fx:id="period4" layoutX="10.0" layoutY="207.0" mnemonicParsing="false" onAction="#period4Action" prefHeight="67.0" prefWidth="69.0" text="Period 4" />
+                        <Button fx:id="lunch" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#lunchAction" prefHeight="35.0" prefWidth="70.0" text="Lunch" />
+                        <Button layoutX="10.0" layoutY="341.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="71.0" text="Period 5" />
+                        <Button fx:id="period6" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#period6Action" prefHeight="67.0" prefWidth="72.0" text="Period 6" />
+                        <Button fx:id="period7" layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#period7Action" prefHeight="67.0" prefWidth="71.0" text="Period 7" />
+                        <Button fx:id="period8" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" onAction="#period8Action" prefHeight="67.0" prefWidth="71.0" text="Period 8" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="622.0" prefWidth="143.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="143.0" text="Monday" />
+                        <Button fx:id="p11" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#p11Action" prefHeight="67.0" prefWidth="143.0" text="Period 1">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="p12" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#p12Action" prefHeight="67.0" prefWidth="143.0" text="Period 2" />
+                        <Button fx:id="p13" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#p13Action" prefHeight="67.0" prefWidth="144.0" text="Period 3" />
+                        <Button fx:id="p14" layoutX="10.0" layoutY="207.0" mnemonicParsing="false" onAction="#p14Action" prefHeight="67.0" prefWidth="150.0" text="Period 4" />
+                        <Button layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="145.0" text="Lunch" />
+                        <Button fx:id="p15" layoutX="10.0" layoutY="341.0" mnemonicParsing="false" onAction="#p15Action" prefHeight="67.0" prefWidth="144.0" text="Period 5" />
+                        <Button fx:id="p16" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#p16Action" prefHeight="67.0" prefWidth="146.0" text="Period 6" />
+                        <Button fx:id="p17" layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#p17Action" prefHeight="67.0" prefWidth="146.0" text="Period 7" />
+                        <Button fx:id="p18" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" onAction="#p18Action" prefHeight="67.0" prefWidth="144.0" text="Period 8" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="622.0" prefWidth="135.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="225.0" text="Tuesday" />
+                        <Button fx:id="p21" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#p21Action" prefHeight="67.0" prefWidth="141.0" text="Period 1" />
+                        <Button fx:id="p22" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#p22Action" prefHeight="67.0" prefWidth="170.0" text="Period 2" />
+                        <Button fx:id="p23" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#p23Action" prefHeight="67.0" prefWidth="146.0" text="Period 3" />
+                        <Button fx:id="p24" layoutX="10.0" layoutY="207.0" mnemonicParsing="false" onAction="#p24Action" prefHeight="67.0" prefWidth="193.0" text="Period 4" />
+                        <Button layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="190.0" text="Lunch" />
+                        <Button fx:id="p25" layoutX="10.0" layoutY="341.0" mnemonicParsing="false" onAction="#p25Action" prefHeight="67.0" prefWidth="218.0" text="Period 5" />
+                        <Button fx:id="p26" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#p26Action" prefHeight="67.0" prefWidth="172.0" text="Period 6" />
+                        <Button fx:id="p27" layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#p27Action" prefHeight="67.0" prefWidth="247.0" text="Period 7" />
+                        <Button fx:id="p28" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" onAction="#p28Action" prefHeight="67.0" prefWidth="183.0" text="Period 8" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="110.0" layoutY="10.0" prefHeight="622.0" prefWidth="135.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Wednesday" />
+                        <Button fx:id="p31" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#p31Action" prefHeight="67.0" prefWidth="233.0" text="Period 1" />
+                        <Button fx:id="p32" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#p32Action" prefHeight="67.0" prefWidth="226.0" text="Period 2" />
+                        <Button fx:id="p33" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#p33Action" prefHeight="67.0" prefWidth="240.0" text="Period 3" />
+                        <Button fx:id="p34" layoutX="10.0" layoutY="207.0" mnemonicParsing="false" onAction="#p34Action" prefHeight="67.0" prefWidth="186.0" text="Period 4" />
+                        <Button layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="194.0" text="Lunch" />
+                        <Button fx:id="p35" layoutX="10.0" layoutY="341.0" mnemonicParsing="false" onAction="#p35Action" prefHeight="67.0" prefWidth="185.0" text="Period 5" />
+                        <Button fx:id="p36" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#Action" prefHeight="67.0" prefWidth="177.0" text="Period 6" />
+                        <Button fx:id="p37" layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#p37Action" prefHeight="67.0" prefWidth="168.0" text="Period 7" />
+                        <Button fx:id="p38" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" onAction="#p38Action" prefHeight="67.0" prefWidth="179.0" text="Period 8" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="110.0" layoutY="10.0" prefHeight="622.0" prefWidth="135.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" text="Thursday" />
+                        <Button fx:id="p41" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#p41Action" prefHeight="67.0" prefWidth="322.0" text="Period 1" />
+                        <Button fx:id="p42" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#p42Action" prefHeight="67.0" prefWidth="235.0" text="Period 2" />
+                        <Button fx:id="p43" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#p43Action" prefHeight="67.0" prefWidth="207.0" text="Period 3" />
+                        <Button fx:id="p44" layoutX="10.0" layoutY="207.0" mnemonicParsing="false" onAction="#p44Action" prefHeight="67.0" prefWidth="241.0" text="Period 4" />
+                        <Button layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="268.0" text="Lunch" />
+                        <Button fx:id="p45" layoutX="10.0" layoutY="341.0" mnemonicParsing="false" onAction="#p45Action" prefHeight="67.0" prefWidth="261.0" text="Period 5" />
+                        <Button fx:id="p46" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#p46Action" prefHeight="67.0" prefWidth="264.0" text="Period 6" />
+                        <Button fx:id="p47" layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#p47Action" prefHeight="67.0" prefWidth="258.0" text="Period 7" />
+                        <Button fx:id="p48" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" onAction="#p48Action" prefHeight="67.0" prefWidth="354.0" text="Period 8" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="110.0" layoutY="10.0" prefHeight="622.0" prefWidth="136.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" text="Friday" />
+                        <Button fx:id="p51" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#p51Action" prefHeight="67.0" prefWidth="293.0" text="Period 1" />
+                        <Button fx:id="p52" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#p52Action" prefHeight="67.0" prefWidth="261.0" text="Period 2" />
+                        <Button fx:id="p53" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#p53Action" prefHeight="67.0" prefWidth="299.0" text="Period 3" />
+                        <Button fx:id="p54" layoutX="10.0" layoutY="207.0" mnemonicParsing="false" onAction="#p54Action" prefHeight="67.0" prefWidth="330.0" text="Period 4" />
+                        <Button layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="320.0" text="Lunch" />
+                        <Button fx:id="p55" layoutX="10.0" layoutY="341.0" mnemonicParsing="false" onAction="#p55Action" prefHeight="67.0" prefWidth="397.0" text="Period 5" />
+                        <Button fx:id="p56" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#p56Action" prefHeight="67.0" prefWidth="317.0" text="Period 6" />
+                        <Button fx:id="p57" layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#p57Action" prefHeight="67.0" prefWidth="346.0" text="Period 7" />
+                        <Button fx:id="p58" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" onAction="#p58Action" prefHeight="67.0" prefWidth="299.0" text="Period 8" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="37.0" prefWidth="886.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="697.0" prefWidth="81.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
