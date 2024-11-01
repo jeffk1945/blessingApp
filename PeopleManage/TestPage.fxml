@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TestPageController">
+   <children>
+      <DatePicker fx:id="datePicker" layoutX="224.0" layoutY="29.0" onAction="#dateAction" />
+      <CheckBox fx:id="checkBox" layoutX="267.0" layoutY="76.0" mnemonicParsing="false" onAction="#checkBoxAction" text="CheckBox" />
+      <ColorPicker fx:id="colorPicker" layoutX="51.0" layoutY="81.0" onAction="#colorAction" />
+      <ChoiceBox fx:id="cbChoice" layoutX="40.0" layoutY="29.0" onDragDetected="#choiceAction" prefWidth="150.0" />
+      <ComboBox fx:id="cbCombo" layoutX="445.0" layoutY="29.0" onAction="#comboAction" prefWidth="150.0" />
+      <RadioButton fx:id="radioMale" layoutX="432.0" layoutY="76.0" mnemonicParsing="false" onAction="#genderAction" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioFemale" layoutX="505.0" layoutY="76.0" mnemonicParsing="false" onAction="#genderAction" text="Female" toggleGroup="$gender" />
+      <ListView fx:id="lvListView" layoutX="382.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="label" layoutX="75.0" layoutY="365.0" />
+      <ToggleButton fx:id="toggleHonors" layoutX="60.0" layoutY="132.0" mnemonicParsing="false" onAction="#toggleHonorsAction" text="Honors" />
+      <TextArea fx:id="taReason" layoutX="51.0" layoutY="177.0" onDragDetected="#reasonAction" prefHeight="155.0" prefWidth="247.0" />
+      <Button fx:id="btnReason" layoutX="51.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnReasonAction" text="Submit Reason" />
+      <TableView fx:id="tableStudents" layoutX="167.0" layoutY="359.0" prefHeight="200.0" prefWidth="607.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="colGrade" prefWidth="92.0" text="Grade" />
+            <TableColumn fx:id="colEdit" prefWidth="248.0" text="Edit" />
+            <TableColumn fx:id="colDelete" minWidth="0.0" prefWidth="191.0" text="Delete" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="46.0" layoutY="526.0" mnemonicParsing="false" onAction="#addAction" prefHeight="26.0" prefWidth="100.0" text="Add Student" />
+      <Button fx:id="btnDelete" layoutX="48.0" layoutY="489.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="26.0" prefWidth="100.0" text="Delete Student" />
+   </children>
+</AnchorPane>

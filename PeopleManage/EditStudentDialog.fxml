@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditStudentDialogController">
+   <children>
+      <CheckBox fx:id="isHonors" layoutX="441.0" layoutY="46.0" mnemonicParsing="false" onAction="#isHonorsAction" text="Honors" />
+      <DatePicker fx:id="dateOfBirth" layoutX="170.0" layoutY="196.0" onAction="#doBAction" />
+      <Label layoutX="41.0" layoutY="33.0" text="English Name" />
+      <Label layoutX="41.0" layoutY="76.0" text="Name in Korean" />
+      <ComboBox fx:id="comboGrade" layoutX="170.0" layoutY="115.0" onAction="#gradeAction" prefWidth="150.0" />
+      <Label layoutX="41.0" layoutY="119.0" text="Grade" />
+      <Label layoutX="41.0" layoutY="201.0" text="Date of Birth" />
+      <TextField fx:id="tfNameEnglish" layoutX="165.0" layoutY="29.0" onAction="#nameEnglishAction" />
+      <TextField fx:id="tfNameKorean" layoutX="165.0" layoutY="72.0" />
+      <CheckBox fx:id="isDorm" layoutX="440.0" layoutY="89.0" mnemonicParsing="false" onAction="#isDormAction" text="Living in Dormitory" />
+      <ChoiceBox fx:id="choiceCampus" layoutX="170.0" layoutY="156.0" prefWidth="150.0" />
+      <Label layoutX="43.0" layoutY="161.0" text="Campus" />
+      <DatePicker fx:id="dateEnrollment" layoutX="169.0" layoutY="256.0" onAction="#enrollmentAction" />
+      <Label layoutX="41.0" layoutY="261.0" text="Enrollment Date" />
+      <Button fx:id="btnApplyChanges" layoutX="477.0" layoutY="334.0" mnemonicParsing="false" onAction="#applyChangesAction" text="Apply Changes" />
+      <Button fx:id="btnCancel" layoutX="385.0" layoutY="335.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancel" />
+      <RadioButton fx:id="radioMale" layoutX="165.0" layoutY="326.0" mnemonicParsing="false" onAction="#genderAction" selected="true" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioFemale" layoutX="245.0" layoutY="325.0" mnemonicParsing="false" onAction="#genderAction" text="Female" toggleGroup="$gender" />
+      <Label layoutX="43.0" layoutY="327.0" text="Gender" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditRoomDialogController">
+   <children>
+      <ChoiceBox fx:id="choiceRoomFloor" layoutX="53.0" layoutY="115.0" prefWidth="150.0" />
+      <Label layoutX="53.0" layoutY="29.0" text="Campus" />
+      <Label layoutX="53.0" layoutY="90.0" text="Floor" />
+      <Label layoutX="52.0" layoutY="164.0" text="Room Name" />
+      <TextField fx:id="labelRoomName" layoutX="53.0" layoutY="188.0" />
+      <Spinner fx:id="roomCapacity" editable="true" layoutX="53.0" layoutY="269.0" />
+      <Label layoutX="52.0" layoutY="241.0" text="Capacity" />
+      <Button fx:id="btnApplyChanges" layoutX="454.0" layoutY="337.0" mnemonicParsing="false" onAction="#applyChangesAction" text="Apply Changes" />
+      <Button fx:id="btnCancelEditRoom" layoutX="378.0" layoutY="337.0" mnemonicParsing="false" onAction="#cancelEditRoomAction" text="Cancel" />
+      <ComboBox fx:id="comboRoomCampus" layoutX="53.0" layoutY="53.0" onAction="#roomCampusAction" prefWidth="150.0" />
+   </children>
+</AnchorPane>

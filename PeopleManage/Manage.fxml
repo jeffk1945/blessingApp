@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageController">
+   <center>
+      <TabPane fx:id="tabPane" prefHeight="619.0" prefWidth="1012.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnAddStudent" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#addStudentAction" prefHeight="26.0" prefWidth="110.0" text="Add Student" />
+                        <TableView fx:id="tableViewStudents" layoutX="21.0" layoutY="62.0" prefHeight="481.0" prefWidth="1054.0">
+                          <columns>
+                            <TableColumn fx:id="colStudentsGrade" prefWidth="46.0" text="Grade" />
+                            <TableColumn fx:id="colStudentsNameEnglish" prefWidth="179.0" text="English Name" />
+                              <TableColumn fx:id="colStudentsNameKorean" prefWidth="126.0" text="Korean Name" />
+                              <TableColumn fx:id="colStudentsGender" prefWidth="59.0" text="Gender" />
+                              <TableColumn fx:id="colStudentsHonors" prefWidth="54.0" text="Honors" />
+                              <TableColumn fx:id="colStudentsDoB" prefWidth="91.0" text="DoB" />
+                              <TableColumn fx:id="colStudentsDorm" prefWidth="51.0" text="Dorm" />
+                              <TableColumn fx:id="colStudentsEnrolled" prefWidth="104.0" text="Enrolled" />
+                              <TableColumn fx:id="colStudentsSubjects" prefWidth="183.0" text="Subjects" />
+                              <TableColumn fx:id="colStudentsEdit" prefWidth="81.0" />
+                              <TableColumn fx:id="colStudentsDelete" prefWidth="79.0" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="comboGrade" layoutX="362.0" layoutY="16.0" onAction="#gradeAction" prefHeight="26.0" prefWidth="106.0" promptText="Grade" />
+                        <ComboBox layoutX="482.0" layoutY="15.0" prefWidth="150.0" promptText="Teacher" />
+                        <ComboBox layoutX="649.0" layoutY="16.0" prefWidth="150.0" promptText="Subject" />
+                        <Button fx:id="btnViewStudents" layoutX="825.0" layoutY="16.0" mnemonicParsing="false" onAction="#viewStudentsAction" text="View" />
+                        <Button fx:id="btnRefreshStudents" layoutX="916.0" layoutY="15.0" mnemonicParsing="false" onAction="#refreshStudentsAction" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Teachers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnAddTeacher" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#addTeacherAction" text="Add Teacher" />
+                        <ComboBox fx:id="comboTeachersSearchCampus" layoutX="335.0" layoutY="24.0" prefWidth="150.0" promptText="Campus" />
+                        <ComboBox layoutX="514.0" layoutY="24.0" prefHeight="26.0" prefWidth="99.0" />
+                        <ComboBox layoutX="636.0" layoutY="24.0" prefWidth="150.0" />
+                        <Button fx:id="btnViewTeachers" layoutX="857.0" layoutY="24.0" mnemonicParsing="false" onAction="#viewTeachersAction" text="View" />
+                        <TableView fx:id="tableViewTeachers" layoutX="26.0" layoutY="67.0" prefHeight="465.0" prefWidth="1047.0">
+                          <columns>
+                            <TableColumn fx:id="colTeachersName" prefWidth="163.0" text="Name" />
+                              <TableColumn fx:id="colTeachersCampus" minWidth="0.0" prefWidth="122.0" text="Campus" />
+                            <TableColumn fx:id="colTeachersStatus" prefWidth="120.0" text="Status" />
+                              <TableColumn fx:id="colTeachersRoom" prefWidth="137.0" text="Room" />
+                              <TableColumn fx:id="colTeachersEmploymentDate" prefWidth="104.0" text="Start Date" />
+                              <TableColumn fx:id="colTeachersSubjects" prefWidth="255.0" text="Subjects" />
+                              <TableColumn fx:id="colTeachersEdit" prefWidth="73.0" />
+                              <TableColumn fx:id="colTeachersDelete" prefWidth="72.0" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnRefreshTeachers" layoutX="1013.0" layoutY="24.0" mnemonicParsing="false" onAction="#refreshTeachersAction" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Subjects">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnAddSubject" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#addSubjectAction" text="Add Subject" />
+                        <ComboBox fx:id="comboSubjectCampus" layoutX="334.0" layoutY="24.0" prefHeight="26.0" prefWidth="101.0" promptText="Campus" />
+                        <ComboBox layoutX="450.0" layoutY="24.0" prefWidth="150.0" promptText="Year" />
+                        <ComboBox layoutX="630.0" layoutY="24.0" prefWidth="150.0" promptText="Semester" />
+                        <Button fx:id="btnViewSubjects" layoutX="834.0" layoutY="24.0" mnemonicParsing="false" onAction="#viewSubjectsAction" text="View" />
+                        <TableView fx:id="tableViewSubjects" layoutX="26.0" layoutY="67.0" prefHeight="465.0" prefWidth="1046.0">
+                           <columns>
+                              <TableColumn fx:id="colSubjectCampus" prefWidth="100.0" text="Campus" />
+                              <TableColumn fx:id="colSubjectName" prefWidth="305.0" text="Subject" />
+                              <TableColumn fx:id="colSubjectCredits" prefWidth="87.0" text="Credits" />
+                              <TableColumn fx:id="colSubjectTeacher" prefWidth="273.0" text="Teacher" />
+                              <TableColumn fx:id="colSubjectGrade" prefWidth="138.0" text="Grades" />
+                              <TableColumn fx:id="colSubjectsEdit" prefWidth="73.0" />
+                              <TableColumn fx:id="colSubjectsDelete" prefWidth="69.0" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnRefreshSubjects" layoutX="936.0" layoutY="24.0" mnemonicParsing="false" onAction="#refreshSubjectsAction" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Rooms">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnAddRoom" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#addRoomAction" text="Add Room" />
+                        <ComboBox fx:id="comboCampus" layoutX="291.0" layoutY="24.0" onAction="#roomCampusAction" prefWidth="150.0" promptText="Campus" />
+                        <ComboBox fx:id="comboFloor" layoutX="474.0" layoutY="24.0" onAction="#roomFloorAction" prefWidth="150.0" promptText="Floor" />
+                        <Button fx:id="btnViewRooms" layoutX="675.0" layoutY="23.0" mnemonicParsing="false" onAction="#viewRoomsAction" text="View" />
+                        <TableView fx:id="tableViewRooms" layoutX="26.0" layoutY="67.0" prefHeight="465.0" prefWidth="1042.0">
+                           <columns>
+                              <TableColumn fx:id="colRoomsCampus" prefWidth="204.0" text="Campus" />
+                              <TableColumn fx:id="colRoomsFloor" prefWidth="109.0" text="Floor" />
+                              <TableColumn fx:id="colRoomsRoomName" prefWidth="422.0" text="Room" />
+                              <TableColumn fx:id="colRoomsCapacity" minWidth="1.0" prefWidth="125.0" text="Capacity" />
+                              <TableColumn fx:id="colRoomsEdit" minWidth="1.0" prefWidth="91.0" />
+                              <TableColumn fx:id="colRoomsDelete" minWidth="1.0" prefWidth="90.0" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnRefreshRooms" layoutX="1008.0" layoutY="24.0" mnemonicParsing="false" onAction="#refreshRoomsAction" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <Label text="Label" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="1012.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnLogout" layoutX="20.0" layoutY="7.0" mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
